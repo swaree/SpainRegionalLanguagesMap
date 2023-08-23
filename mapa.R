@@ -23,9 +23,9 @@ municipios = municipios %>%
 
 ggplot(municipios) +
   geom_sf(fill = "gray80", color = "gray72", size = 0.01) +
-  # geom_sf(fill = "transparent", color = "gray52", size = 0.02, 
-  #         data = . %>% group_by(provincia) %>% summarise()) +
-  # geom_sf(fill = "transparent", color = "black", size = 0.03, 
-  #         data = . %>% group_by(c_autonoma) %>% summarise()) +
+  geom_sf(fill = "transparent", color = "gray52", size = 0.02,
+          data = . %>% group_by(provincia) %>% summarise()) +
+  geom_sf(fill = "transparent", color = "black", size = 0.03,
+          data = . %>% group_by(c_autonoma) %>% summarise()) +
   coord_sf() +
   theme_void()
